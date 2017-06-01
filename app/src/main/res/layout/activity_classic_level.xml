@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_classic_level"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    tools:context="com.spaylia.delay.classicLevel">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewScore"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RelativeLayout
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonUp"
+        android:id="@+id/levelRelativeLayout"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        android:layout_width="302dp"
+        android:layout_height="378dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewScore">
+
+        <GridLayout
+            android:id="@+id/levelGridLayout"
+            android:layout_width="272dp"
+            android:layout_height="262dp"
+            android:orientation="horizontal"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.36"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="83dp"
+        app:srcCompat="@drawable/left_arrow"
+        android:id="@+id/imageButtonLeft"
+        android:onClick="onClickDifficulty"
+        app:layout_constraintRight_toLeftOf="@+id/imageButtonDown"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonDown"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonDown"
+        android:layout_height="160dp"/>
+
+    <ImageButton
+        android:layout_width="82dp"
+        app:srcCompat="@drawable/right_arrow"
+        android:id="@+id/imageButtonRight"
+        android:onClick="onClickDifficulty"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonUp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonUp"
+        app:layout_constraintLeft_toRightOf="@+id/imageButtonDown"
+        android:layout_height="160dp"/>
+
+    <ImageButton
+        android:layout_width="150dp"
+        app:srcCompat="@drawable/down_arrow"
+        android:id="@+id/imageButtonDown"
+        android:onClick="onClickDifficulty"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_height="80dp"/>
+
+    <ImageButton
+        android:layout_width="150dp"
+        app:srcCompat="@drawable/up_arrow"
+        android:id="@+id/imageButtonUp"
+        android:onClick="onClickDifficulty"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonDown"
+        app:layout_constraintLeft_toLeftOf="@+id/imageButtonDown"
+        app:layout_constraintRight_toLeftOf="@+id/imageButtonRight"
+        android:layout_height="80dp"/>
+
+</android.support.constraint.ConstraintLayout>
